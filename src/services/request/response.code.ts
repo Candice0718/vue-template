@@ -1,0 +1,5 @@
+export enum ResponseCode{
+  CODE_SUCCESS = 200,
+  CODE_SERVER_ERROR = 500,
+  CODE_ERRO_UNKOWN = 5000
+}
