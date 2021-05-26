@@ -2,8 +2,7 @@
  * 请求基础类
  */
  import Constant from './index';
- import * as ResponseCode from './reponse.code';
- import { getToken } from '@utils';
+ import * as ResponseCode from './response.code';
  
  export default class BaseRequest {
      constructor(body = {}, options = {}) {
@@ -11,8 +10,7 @@
          this.body = body;
          const optionsHeader = {
              ...Constant.defaults.headers,
-             ...options.headers,
-             token: getToken()
+             ...options.headers
          };
          this.options = {
              ...Constant.defaults,
@@ -106,17 +104,6 @@
       * @param erro
       */
      onErro(code, message, erro) {
-         // 处理错误code码
-         const instance = ocj.instance;
-         // 报错
-         if(instance && instance.$message) { 
-             instance.$message.error(`${message}`);
-         }
-         // 清空失效token
-         if(ResponseCode.CODE_EXPIRE === code) {
-             localStorage.removeItem('tokenInfo');
-             instance.$router.push({ path: "/login"});
-         }
          this.failCallBack({
              code,
              erro,

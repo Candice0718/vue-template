@@ -6,11 +6,25 @@ import pages from "./pages/index";
 const routes = [
     {
         path: "/",
-        component: pages.page1
-    },
-    {
-        path: "/page2",
-        component: pages.page2
+        component: pages.layout,
+        children: [
+            {
+                path: "/",
+                component: pages.home,
+                name: "home",
+                meta: {
+                    title: "首页",
+                }
+            },
+            {
+                path: "/report",
+                component: pages.report,
+                name: "report",
+                meta: {
+                    title: "报表",
+                }
+            },
+        ]
     }
 ];
 

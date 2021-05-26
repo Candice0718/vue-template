@@ -5,7 +5,8 @@
  */
 // 路由配置
 const pages = {
-    page1: () => import( /* webpackChunkName: "pages/page1" */ "./page1/page1.vue"),
-    page2: () => import( /* webpackChunkName: "pages/page2" */ "./page2/page2.vue"),
+    home: () => import( /* webpackChunkName: "pages/home" */ "./home/home.vue"),
+    layout: () => import( /* webpackChunkName: "pages/layout" */ "./layout/layout.vue"),
+    report: () => import( /* webpackChunkName: "pages/report" */ "./report/report.vue"),
 };
 export default pages;

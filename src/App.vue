@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    <a href="/#/">page1</a>
-    <a href="/#/page2">page2</a>
     <router-view></router-view>
   </div>
 </template>

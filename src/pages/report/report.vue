@@ -1,10 +1,10 @@
 <template>
     <div>
-        组件 component1
+        路由 page-report
     </div>
 </template>
 <script>
     export default {
-        name: 'component1'
+        name: 'report'
     };
 </script>
