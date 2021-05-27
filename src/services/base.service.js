@@ -23,7 +23,7 @@ export default class BaseService extends BaseRequest {
     getBaseUrl() {
         // 使用mock数据需要将BaseUrl注释
         // return super.getBaseUrl();
-        return '';
+        return '/';
     }
     getFullUrl() {
         return super.getBaseUrl() + this.requestUrl();

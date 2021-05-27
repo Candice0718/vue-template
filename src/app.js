@@ -9,6 +9,9 @@ import './sass/base.scss';
 // 引入全部的组件
 require('./components/index.js');
 
+// 引入mock数据
+import "../mock/index.js";
+
 Vue.config.productionTip = false;
 
 // 添加全局的事件总线
