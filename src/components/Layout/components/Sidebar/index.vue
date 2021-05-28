@@ -101,8 +101,7 @@ export default {
         },
     },
     created() {
-        // 监听侧栏收缩事件
-        // ocj.on('ocj_sidebar_collapse_event', this.shiftCollapse);
+
     },
     methods: {
         shiftCollapse() {

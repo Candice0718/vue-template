@@ -91,9 +91,6 @@ export default {
         };
     },
     methods: {
-        // clickCollapse() {
-        //     this.$eventBus.$emit("ocj_sidebar_collapse_event");
-        // },
         emitCommand(command) {
             switch (command) {
                 case "logout":

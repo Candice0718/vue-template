@@ -3,7 +3,7 @@
  *@author Candice
  *@description 网络请求基础配置
  */
-import OcjAdapter from './axios-adapter.js';
+import axiosAdapter from './axios-adapter.js';
 
 const
     ENV = {
@@ -40,7 +40,7 @@ const
             timeout: 60 * 1000,
             method: 'POST',
         },
-        getAdapter: (options) => new OcjAdapter(options),
+        getAdapter: (options) => new axiosAdapter(options),
         baseUrl: ApiEnv.url,
     };
 export default API;
